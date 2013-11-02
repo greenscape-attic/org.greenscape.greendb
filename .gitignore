@@ -2,5 +2,10 @@
 
 # Package Files #
 *.jar
-*.war
-*.ear
+
+/bin
+/bin_test
+/generated
+/bin/
+/bin_test/
+/generated/

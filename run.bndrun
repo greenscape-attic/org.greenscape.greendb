@@ -1,0 +1,23 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.7
+-runsystemcapabilities: ${native_capability}
+
+-resolve.effective: active
+
+-runbundles: org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.shell,\
+	org.apache.felix.gogo.command,\
+	com.orientechnologies.orientdb-enterprise,\
+	com.orientechnologies.orientdb-server,\
+	com.orientechnologies.orient-commons,\
+	com.orientechnologies.orientdb-core,\
+	com.orientechnologies.orientdb-client,\
+	com.sun.mail.javax.mail,\
+	org.greenscape.greendb;version=latest,\
+	osgi.cmpn,\
+	org.apache.felix.fileinstall,\
+	org.apache.felix.configadmin
+
+-runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)'
+-runvm: -Dfelix.fileinstall.dir=/tmp/load
