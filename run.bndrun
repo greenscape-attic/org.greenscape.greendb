@@ -16,7 +16,9 @@
 	org.greenscape.greendb;version=latest,\
 	osgi.cmpn,\
 	org.apache.felix.fileinstall,\
-	org.apache.felix.configadmin
+	org.apache.felix.configadmin,\
+	org.apache.felix.scr,\
+	org.greenscape.test;version=latest
 
 -runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)'

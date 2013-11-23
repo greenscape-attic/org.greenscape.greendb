@@ -1,15 +1,15 @@
 Private-Package: org.greenscape.greendb.impl
--buildpath: osgi.core,\
-	osgi.cmpn,\
-	biz.aQute.bnd.annotation,\
-	junit.osgi,\
+-buildpath: junit.osgi,\
 	com.orientechnologies.orientdb-core,\
-	com.orientechnologies.orient-commons
+	com.orientechnologies.orient-commons,\
+	osgi.compendium,\
+	osgi.core,\
+	org.eclipse.osgi.services
 Bundle-Version: 0.1.0
 Bundle-Name: GreenDB
 Bundle-Vendor: Greenscape
-Bundle-Activator: org.greenscape.greendb.impl.Activator
 Export-Package: org.greenscape.greendb
 -runee: JavaSE-1.7
 Bundle-Description: Embedded DB for Greenscape
 Bundle-Category: Database
+-dsannotations: *

@@ -2,7 +2,6 @@
  * 
  */
 /**
- * @author sajid
- * @version 0.1.0
+ * @author Sheikh Sajid
  */
 package org.greenscape.greendb.impl;
