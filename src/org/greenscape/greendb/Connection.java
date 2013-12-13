@@ -11,5 +11,5 @@ import com.orientechnologies.orient.core.db.document.ODatabaseDocument;
  */
 
 public interface Connection {
-	public ODatabaseDocument getDatabaseDocument();
+	ODatabaseDocument getDatabaseDocument();
 }
