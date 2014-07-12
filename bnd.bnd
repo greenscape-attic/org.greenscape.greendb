@@ -5,7 +5,7 @@ Private-Package: org.greenscape.greendb.impl
 	osgi.compendium,\
 	osgi.core,\
 	org.eclipse.osgi.services
-Bundle-Version: 0.1.0
+Bundle-Version: 0.1.1
 Bundle-Name: GreenDB
 Bundle-Vendor: Greenscape
 Export-Package: org.greenscape.greendb

@@ -7,14 +7,15 @@ import org.greenscape.greendb.GreenDBConstants;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
+import org.osgi.service.component.annotations.Deactivate;
 
 import com.orientechnologies.orient.core.db.document.ODatabaseDocument;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
 /**
- * 
+ *
  * @author Sheikh Sajid
- * 
+ *
  */
 @Component(name = GreenDBConstants.SERVICE_NAME, configurationPolicy = ConfigurationPolicy.REQUIRE, configurationPid = GreenDBConstants.CONFIG_PID, servicefactory = true)
 public class ConnectionImpl implements Connection {
@@ -49,6 +50,13 @@ public class ConnectionImpl implements Connection {
 				// TODO: notify others that db is not available anymore
 				greenDb = initDB(location);
 			}
+		}
+	}
+
+	@Deactivate
+	private void deactivate() {
+		if (greenDb != null && !greenDb.isClosed()) {
+			greenDb.close();
 		}
 	}
 
