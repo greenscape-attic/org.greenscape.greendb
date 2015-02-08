@@ -2,15 +2,15 @@ Private-Package: org.greenscape.greendb.impl
 -buildpath: junit.osgi,\
 	com.orientechnologies.orientdb-core,\
 	com.orientechnologies.orient-commons,\
-	osgi.compendium,\
-	osgi.core,\
+	osgi.core;version=5.0,\
 	org.eclipse.osgi.services
 Bundle-Version: 0.1.1
 Bundle-Name: GreenDB
 Bundle-Vendor: Greenscape
 Export-Package: org.greenscape.greendb
--runee: JavaSE-1.7
 Bundle-Description: Embedded DB for Greenscape
 Bundle-Category: Database
 -dsannotations: *
 -sources: false
+javac.source=1.8
+javac.target=1.8
