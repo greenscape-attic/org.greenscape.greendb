@@ -11,6 +11,5 @@ Export-Package: org.greenscape.greendb
 Bundle-Description: Embedded DB for Greenscape
 Bundle-Category: Database
 -dsannotations: *
--sources: false
 javac.source=1.8
 javac.target=1.8
